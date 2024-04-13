@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}書籍作成{% endblock %}
+
+{% block content %}
+<main class="c2">
+<div class="main"> 
+  <section>
+    <div class="list-grid">
+    <div class="list">
+  <form method="post" enctype="multipart/form-data" class="p-4 m-4 bg-light border border-success rounded form-group">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="作成する">
+  </form>
+    </div>
+    </div>
+  </section>
+</div>
+{% endblock content %}
